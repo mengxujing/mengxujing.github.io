@@ -90,7 +90,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/16/first-1/" data-id="ck31hfgea0000wcuw0wkzf9av" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/16/first-1/" data-id="ck31l2fuq0000hwuw4f9xe7q7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -124,53 +124,34 @@
       
         <hr>
 <p>title: first<br>date: 2019-11-13 21:25:51<br>tags:</p>
-<h1 id="面向对象的三大特征"><a href="#面向对象的三大特征" class="headerlink" title="面向对象的三大特征"></a>面向对象的三大特征</h1><ol>
-<li>封装</li>
-<li>继承</li>
-<li>多态</li>
+<center> <h1>面向对象的三大特征<h1/> </center>
+1. 封装<br>
+2. 继承<br>
+3. 多态<br>
+
+
+<p><strong>封装</strong><br></p>
+<ol>
+<li>概念：<br><br>&nbsp;&nbsp;指的就是将描述实体的数据和对这些数据的控制进行操作集合到一起，形成一个封装体。对类内的某些信息进行隐藏，不允许外界进行直接访问，但外部可以通过该类提供的方法实现对该类的操作和访问。保证了程序的安全性的可维护性。<br></li>
+<li>优点：<br><br> 有效的减少耦合性;<br><br> 在类的内部可以自由修改;<br><br> 可以对成员变量进行精确的控制;<br><br> 隐藏信息，实现细节。<br></li>
+<li>实现方法：<br><br>&nbsp;&nbsp; <front size=12>封装就是通过修改属性的可见性（修改为privated),设置getter/setter方法（用于属性的读写）以及在这些方法中加入属性控制语句（对属性值的合法性进行判断)。</front><br><br>  ‘’’<br>  public class Person{<br>  private String name;<br>  private int age;<br>​<br>  public int getAge(){<pre><code>return age;</code></pre>  }<br>​<br>  public String getName(){<pre><code>return name;</code></pre>  }<br>​<br>  public void setAge(int age){<pre><code>this.age = age;</code></pre>  }<br>​<br>  public void setName(String name){<pre><code>this.name = name;</code></pre>  }<br>  }<br> ‘’’<br><br>&nbsp;&nbsp;this 关键字可以调用自身类和方法，也可以解决实例变量（private String name）和局部变量（setName(String name)中的name变量）之间发生的同名的冲突问题。<br></li>
 </ol>
-<p><strong>封装</strong></p>
+<p><strong>继承</strong><br></p>
+<ol>
+<li><p>概念：<br><br>&nbsp;&nbsp;继承就是子类继承父类的特征和行为，使得子类对象（实例）具有父类的实例域和方法，或子类从父类继承方法，使得子类具有父类相同的行为。<br></p>
+</li>
+<li><p>特点：<br></p>
+<p> 子类继承父类非 private 的属性、方法。</p>
+<p> 子类可以对父类进行扩展。</p>
+<p> Java 的继承是单继承，但是可以多重继承。</p>
+<p> 提高了类之间的耦合性（代码独立性越差）。</p>
+</li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/13/first/" data-id="ck31hfgf90003wcuw44fy7tgz" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-word" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/13/hello-word/" class="article-date">
-  <time datetime="2019-11-13T12:14:29.000Z" itemprop="datePublished">2019-11-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/13/hello-word/">hello-word</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/13/hello-word/" data-id="ck31hfgew0001wcuwb0hjhk3t" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/13/first/" data-id="ck31l2fux0002hwuw231od9k0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -206,43 +187,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/13/myHexo/" data-id="ck31hfgf40002wcuw4fnv84sc" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-myblog" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/12/myblog/" class="article-date">
-  <time datetime="2019-11-12T13:34:59.000Z" itemprop="datePublished">2019-11-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/12/myblog/">myblog</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/12/myblog/" data-id="ck31hfgfd0004wcuwd7ev33zj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/13/myHexo/" data-id="ck31l2fuz0003hwuwc2hwau2p" class="article-share-link">Share</a>
       
       
     </footer>
@@ -278,7 +223,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/12/article-title/" data-id="ck31hfgfn0006wcuw20uebxf6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/12/article-title/" data-id="ck31l2fuv0001hwuwbpue8t9c" class="article-share-link">Share</a>
       
       
     </footer>
@@ -327,7 +272,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/12/hello-world/" data-id="ck31hfgfi0005wcuw65ud4ro0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/12/hello-world/" data-id="ck31l2fva0004hwuw4b8ofzup" class="article-share-link">Share</a>
       
       
     </footer>
@@ -376,15 +321,15 @@
           </li>
         
           <li>
-            <a href="/2019/11/13/hello-word/">hello-word</a>
-          </li>
-        
-          <li>
             <a href="/2019/11/13/myHexo/">myHexo</a>
           </li>
         
           <li>
-            <a href="/2019/11/12/myblog/">myblog</a>
+            <a href="/2019/11/12/article-title/">article title</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/12/hello-world/">Hello World</a>
           </li>
         
       </ul>
