@@ -61,10 +61,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-面向对象三大特征" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-用hexo github搭建博客踩过的坑" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/11/16/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81/" class="article-date">
-  <time datetime="2019-11-16T13:08:26.696Z" itemprop="datePublished">2019-11-16</time>
+    <a href="/2019/11/17/%E7%94%A8hexo%20github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/" class="article-date">
+  <time datetime="2019-11-17T08:44:52.115Z" itemprop="datePublished">2019-11-17</time>
 </a>
     
   </div>
@@ -75,7 +75,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/16/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81/">面向对象三大特征</a>
+      <a class="article-title" href="/2019/11/17/%E7%94%A8hexo%20github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/">用hexo github搭建博客踩过的坑</a>
     </h1>
   
 
@@ -83,36 +83,69 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<p>title: first<br>date: 2019-11-13 21:25:51<br>tags:</p>
-<center> <h1>面向对象的三大特征<h1/> </center>
-1. 封装<br>
-2. 继承<br>
-3. 多态<br>
-
-
-<p><strong>封装</strong><br></p>
+        <p>&lt;size=6&gt;<b>说一说我搭建这个hexo+github博客时出现的问题以及我的解决方法<b/></size><br></p>
 <ol>
-<li>概念：<br><br>&nbsp;&nbsp;指的就是将描述实体的数据和对这些数据的控制进行操作集合到一起，形成一个封装体。对类内的某些信息进行隐藏，不允许外界进行直接访问，但外部可以通过该类提供的方法实现对该类的操作和访问。保证了程序的安全性的可维护性。<br></li>
-<li>优点：<br><br> 有效的减少耦合性;<br><br> 在类的内部可以自由修改;<br><br> 可以对成员变量进行精确的控制;<br><br> 隐藏信息，实现细节。<br></li>
-<li>实现方法：<br><br>&nbsp;&nbsp; <front size=12>封装就是通过修改属性的可见性（修改为privated),设置getter/setter方法（用于属性的读写）以及在这些方法中加入属性控制语句（对属性值的合法性进行判断)。</front><br><br>  ‘’’<br>  public class Person{<br>  private String name;<br>  private int age;<br>​<br>  public int getAge(){<pre><code>return age;</code></pre>  }<br>​<br>  public String getName(){<pre><code>return name;</code></pre>  }<br>​<br>  public void setAge(int age){<pre><code>this.age = age;</code></pre>  }<br>​<br>  public void setName(String name){<pre><code>this.name = name;</code></pre>  }<br>  }<br> ‘’’<br><br>&nbsp;&nbsp;this 关键字可以调用自身类和方法，也可以解决实例变量（private String name）和局部变量（setName(String name)中的name变量）之间发生的同名的冲突问题。<br></li>
+<li><b>创建完成后直接输入<a href="http://username.github.io" target="_blank" rel="noopener">http://username.github.io</a> 却出现404错误<b/><br></li>
 </ol>
-<p><strong>继承</strong><br></p>
-<ol>
-<li><p>概念：<br><br>&nbsp;&nbsp;继承就是子类继承父类的特征和行为，使得子类对象（实例）具有父类的实例域和方法，或子类从父类继承方法，使得子类具有父类相同的行为。<br></p>
+<ul>
+<li><p>创建一个新的仓库<br><img src="https://img-blog.csdn.net/20171101113223880?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzI0MjM5MTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
 </li>
-<li><p>特点：<br></p>
-<p> 子类继承父类非 private 的属性、方法。</p>
-<p> 子类可以对父类进行扩展。</p>
-<p> Java 的继承是单继承，但是可以多重继承。</p>
-<p> 提高了类之间的耦合性（代码独立性越差）。</p>
+<li><p>给仓库命名<br></p>
 </li>
+<li><p>进入到这个仓库，复制这个链接 <img src="https://img-blog.csdn.net/20171101113407787?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzI0MjM5MTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
+<br></li>
+<li><p>打开blog文件夹，找—config.yml<img src="https://img-blog.csdn.net/20171101113431294?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzI0MjM5MTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
+<br></li>
+<li><p>更改-config.yml的配置<img src="https://img-blog.csdn.net/20171101114442289?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzI0MjM5MTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""><br></p>
+</li>
+<li><p>在blog目录下执行如下命令<br></p>
+</li>
+</ul>
+<p>//生成静文件<br>hexo g<br>//部署网站<br>hexo d</p>
+<ul>
+<li>访问http//username.github.io网址就可以看到博客界面了。</li>
+</ul>
+<ol start="2">
+<li><strong>hexo更换主题后，本地运行测试命令行提示 : WARN No layout: index.html?</strong><b></li>
 </ol>
+<ul>
+<li><p>检查下载的主题是不是放在了themes文件夹下面，比如next主题的放置，就是点开themes就看到next的文件夹，next下面就是主题的文件，不能打开next文件夹还有themes</p>
+</li>
+<li><p>检查站点配置_config.yml是不是下面的形式</p>
+</li>
+</ul>
+<p>theme: 你的主题名字</p>
+<p>注意：</p>
+<ul>
+<li>这里是theme，不是themes.</li>
+</ul>
+<ul>
+<li>theme后面与主题名直接有一个空格。</li>
+</ul>
+<ul>
+<li>主题名字是否与themes文件夹下 主题的名字一致。</li>
+</ul>
+<p>比如next：theme: next,冒号后面有空格。</p>
+<p>假如全部一致还运行有错，建议每次修改后</p>
+<p>你先输入命令hexo clean清理一下原来的配置，然后hexo s –debug运行，浏览器页面打开隐身模式重新打开一个页面。</p>
+<ol start="3">
+<li><b>hexo指令无法使用，一直报错，不管是hexo clean 、hexo g、还是hexo d 、hexo new，这些指令都出现了错误，<b/><br></li>
+</ol>
+<ul>
+<li>报错原因：插件错误，hexo-deployer-git插件出现错误</li>
+<li>在blog下node_modules文件夹下检查“hexo-deployer-git”文件是否异常</li>
+</ul>
+<ol start="4">
+<li><strong>npm WARN optional SKIPPING OPTIONAL DEPENDENCY: <a href="mailto:fsevents@1.2.0" target="_blank" rel="noopener">fsevents@1.2.0</a> (node_modules\fsevents</strong><br></li>
+</ol>
+<ul>
+<li>原因：<br>fsevents不在package.json里，但是仍然安装了，是因为你的系统不是Windows系统，fsevents是苹果系统的可选依赖,你的项目有可能是团队项目，别人在他的mac上安装了fsevents相关依赖库，所以到这边你也就安装到你的windows上边了。你可以检查你的package.json 文件中是不是有fsevents相关依赖，删除即好！<br><br>如果没有，其他的npm包也会有依赖fsevents的！！！<br><br>这是warning错误，是因为mac下需要 fsevents，这里是在windows环境，所以可以忽略这个错误。<br></li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/16/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81/" data-id="ck32r3y570002isuwfye95xxg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/17/%E7%94%A8hexo%20github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/" data-id="ck32swue00001jguwfizcfhza" class="article-share-link">Share</a>
       
       
     </footer>
@@ -216,7 +249,7 @@ d.eatTest();
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/13/first/" data-id="ck32r3y4i0000isuw8jtvabto" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/13/first/" data-id="ck32swudo0000jguw9jrbc0wz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -265,7 +298,7 @@ d.eatTest();
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/12/hello-world/" data-id="ck32r3y4q0001isuw8n911guj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/12/hello-world/" data-id="ck32swueg0002jguwaqpqdra6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -306,7 +339,7 @@ d.eatTest();
       <ul>
         
           <li>
-            <a href="/2019/11/16/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81/">面向对象三大特征</a>
+            <a href="/2019/11/17/%E7%94%A8hexo%20github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/">用hexo github搭建博客踩过的坑</a>
           </li>
         
           <li>
