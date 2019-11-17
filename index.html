@@ -61,10 +61,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-first-1" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-面向对象三大特征" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/11/16/first-1/" class="article-date">
-  <time datetime="2019-11-16T11:21:26.136Z" itemprop="datePublished">2019-11-16</time>
+    <a href="/2019/11/16/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81/" class="article-date">
+  <time datetime="2019-11-16T13:08:26.696Z" itemprop="datePublished">2019-11-16</time>
 </a>
     
   </div>
@@ -75,7 +75,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/16/first-1/">first-1</a>
+      <a class="article-title" href="/2019/11/16/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81/">面向对象三大特征</a>
     </h1>
   
 
@@ -84,13 +84,35 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<p>title: first<br>date: 2019-11-16 19:21:26<br>tags:</p>
-<p>—<strong>面向对象</strong></p>
+<p>title: first<br>date: 2019-11-13 21:25:51<br>tags:</p>
+<center> <h1>面向对象的三大特征<h1/> </center>
+1. 封装<br>
+2. 继承<br>
+3. 多态<br>
+
+
+<p><strong>封装</strong><br></p>
+<ol>
+<li>概念：<br><br>&nbsp;&nbsp;指的就是将描述实体的数据和对这些数据的控制进行操作集合到一起，形成一个封装体。对类内的某些信息进行隐藏，不允许外界进行直接访问，但外部可以通过该类提供的方法实现对该类的操作和访问。保证了程序的安全性的可维护性。<br></li>
+<li>优点：<br><br> 有效的减少耦合性;<br><br> 在类的内部可以自由修改;<br><br> 可以对成员变量进行精确的控制;<br><br> 隐藏信息，实现细节。<br></li>
+<li>实现方法：<br><br>&nbsp;&nbsp; <front size=12>封装就是通过修改属性的可见性（修改为privated),设置getter/setter方法（用于属性的读写）以及在这些方法中加入属性控制语句（对属性值的合法性进行判断)。</front><br><br>  ‘’’<br>  public class Person{<br>  private String name;<br>  private int age;<br>​<br>  public int getAge(){<pre><code>return age;</code></pre>  }<br>​<br>  public String getName(){<pre><code>return name;</code></pre>  }<br>​<br>  public void setAge(int age){<pre><code>this.age = age;</code></pre>  }<br>​<br>  public void setName(String name){<pre><code>this.name = name;</code></pre>  }<br>  }<br> ‘’’<br><br>&nbsp;&nbsp;this 关键字可以调用自身类和方法，也可以解决实例变量（private String name）和局部变量（setName(String name)中的name变量）之间发生的同名的冲突问题。<br></li>
+</ol>
+<p><strong>继承</strong><br></p>
+<ol>
+<li><p>概念：<br><br>&nbsp;&nbsp;继承就是子类继承父类的特征和行为，使得子类对象（实例）具有父类的实例域和方法，或子类从父类继承方法，使得子类具有父类相同的行为。<br></p>
+</li>
+<li><p>特点：<br></p>
+<p> 子类继承父类非 private 的属性、方法。</p>
+<p> 子类可以对父类进行扩展。</p>
+<p> Java 的继承是单继承，但是可以多重继承。</p>
+<p> 提高了类之间的耦合性（代码独立性越差）。</p>
+</li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/16/first-1/" data-id="ck31l2fuq0000hwuw4f9xe7q7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/16/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81/" data-id="ck32qztq100012ouw7q1ad1iw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -146,84 +168,23 @@
 <p> Java 的继承是单继承，但是可以多重继承。</p>
 <p> 提高了类之间的耦合性（代码独立性越差）。</p>
 </li>
+<li><p>‘’’<br> class Animal{<br>   privated</p>
+<pre><code>String name;
+String move;</code></pre><p>   public</p>
+<pre><code>void show(){
+System.out.println(&quot;name:move&quot;);
+}</code></pre><p>  }<br> class Bird extends Animal{<br>   void move(){</p>
+<pre><code>System.out.println(&quot;Bird:fly&quot;);}</code></pre><p>   void all(){</p>
+<pre><code>super.show();
+this.move();}</code></pre><p> public static void main(String args[]){<br> Bird b=new Bird();<br> b.all();</p>
+<p> ‘’’</p>
+</li>
 </ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/13/first/" data-id="ck31l2fux0002hwuw231od9k0" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-myHexo" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/13/myHexo/" class="article-date">
-  <time datetime="2019-11-13T12:08:29.000Z" itemprop="datePublished">2019-11-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/13/myHexo/">myHexo</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/13/myHexo/" data-id="ck31l2fuz0003hwuwc2hwau2p" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-article-title" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/12/article-title/" class="article-date">
-  <time datetime="2019-11-12T12:55:48.000Z" itemprop="datePublished">2019-11-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/12/article-title/">article title</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/12/article-title/" data-id="ck31l2fuv0001hwuwbpue8t9c" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/13/first/" data-id="ck32qztpk00002ouwehpvbl4p" class="article-share-link">Share</a>
       
       
     </footer>
@@ -272,7 +233,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/12/hello-world/" data-id="ck31l2fva0004hwuw4b8ofzup" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/12/hello-world/" data-id="ck32qztq400022ouw2rc04n5k" class="article-share-link">Share</a>
       
       
     </footer>
@@ -313,19 +274,11 @@
       <ul>
         
           <li>
-            <a href="/2019/11/16/first-1/">first-1</a>
+            <a href="/2019/11/16/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81/">面向对象三大特征</a>
           </li>
         
           <li>
             <a href="/2019/11/13/first/">first</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/13/myHexo/">myHexo</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/12/article-title/">article title</a>
           </li>
         
           <li>
