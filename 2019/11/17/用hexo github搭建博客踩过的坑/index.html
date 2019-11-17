@@ -7,18 +7,18 @@
   
   <title>用hexo github搭建博客踩过的坑 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="说一说我搭建这个hexo+github博客时出现的问题以及我的解决方法  创建完成后直接输入http:&#x2F;&#x2F;username.github.io 却出现404错误##   创建一个新的仓库  给仓库命名  进入到这个仓库，复制这个链接   打开blog文件夹，找—config.yml  更改-config.yml的配置  在blog目录下执行如下命令‘’’ bash&#x2F;&#x2F;生成静文件hexo g&#x2F;&#x2F;部署">
+  <meta name="description" content="说一说我搭建这个hexo+github博客时出现的问题以及我的解决方法##创建完成后直接输入http:&#x2F;&#x2F;username.github.io 却出现404错误##  创建一个新的仓库  给仓库命名  进入到这个仓库，复制这个链接   打开blog文件夹，找—config.yml  更改-config.yml的配置  在blog目录下执行如下命令  ‘’’ bash  &#x2F;&#x2F;生成静文件   hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用hexo github搭建博客踩过的坑">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;17&#x2F;%E7%94%A8hexo%20github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="说一说我搭建这个hexo+github博客时出现的问题以及我的解决方法  创建完成后直接输入http:&#x2F;&#x2F;username.github.io 却出现404错误##   创建一个新的仓库  给仓库命名  进入到这个仓库，复制这个链接   打开blog文件夹，找—config.yml  更改-config.yml的配置  在blog目录下执行如下命令‘’’ bash&#x2F;&#x2F;生成静文件hexo g&#x2F;&#x2F;部署">
+<meta property="og:description" content="说一说我搭建这个hexo+github博客时出现的问题以及我的解决方法##创建完成后直接输入http:&#x2F;&#x2F;username.github.io 却出现404错误##  创建一个新的仓库  给仓库命名  进入到这个仓库，复制这个链接   打开blog文件夹，找—config.yml  更改-config.yml的配置  在blog目录下执行如下命令  ‘’’ bash  &#x2F;&#x2F;生成静文件   hexo">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;20171101113223880?watermark&#x2F;2&#x2F;text&#x2F;aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzI0MjM5MTk=&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA==&#x2F;dissolve&#x2F;70&#x2F;gravity&#x2F;SouthEast">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;20171101113407787?watermark&#x2F;2&#x2F;text&#x2F;aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzI0MjM5MTk=&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA==&#x2F;dissolve&#x2F;70&#x2F;gravity&#x2F;SouthEast">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;20171101113431294?watermark&#x2F;2&#x2F;text&#x2F;aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzI0MjM5MTk=&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA==&#x2F;dissolve&#x2F;70&#x2F;gravity&#x2F;SouthEast">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;20171101114442289?watermark&#x2F;2&#x2F;text&#x2F;aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzI0MjM5MTk=&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA==&#x2F;dissolve&#x2F;70&#x2F;gravity&#x2F;SouthEast">
-<meta property="og:updated_time" content="2019-11-17T10:10:32.012Z">
+<meta property="og:updated_time" content="2019-11-17T10:14:54.266Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;20171101113223880?watermark&#x2F;2&#x2F;text&#x2F;aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzI0MjM5MTk=&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA==&#x2F;dissolve&#x2F;70&#x2F;gravity&#x2F;SouthEast">
   
@@ -89,10 +89,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><b>说一说我搭建这个hexo+github博客时出现的问题以及我的解决方法<b/><br></p>
-<ol>
-<li><h2 id="创建完成后直接输入http-username-github-io-却出现404错误"><a href="#创建完成后直接输入http-username-github-io-却出现404错误" class="headerlink" title="创建完成后直接输入http://username.github.io 却出现404错误##"></a><font size=6><b>创建完成后直接输入<a href="http://username.github.io" target="_blank" rel="noopener">http://username.github.io</a> 却出现404错误##</font><b/><br></h2></li>
-</ol>
+        <p><b>说一说我搭建这个hexo+github博客时出现的问题以及我的解决方法<b/><br><br>##<b>创建完成后直接输入<a href="http://username.github.io" target="_blank" rel="noopener">http://username.github.io</a> 却出现404错误##<b/><br></p>
 <ul>
 <li><p>创建一个新的仓库<br><img src="https://img-blog.csdn.net/20171101113223880?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzI0MjM5MTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
 </li>
@@ -104,15 +101,10 @@
 <br></li>
 <li><p>更改-config.yml的配置<img src="https://img-blog.csdn.net/20171101114442289?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzI0MjM5MTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""><br></p>
 </li>
-<li><p>在blog目录下执行如下命令<br><br>‘’’ bash<br>//生成静文件<br>hexo g<br>//部署网站<br>hexo d<br>‘’’</p>
+<li><p>在blog目录下执行如下命令<br><br>  ‘’’ bash<br>  //生成静文件<br>   hexo g<br>  //部署网站<br>   hexo d<br>  ‘’’</p>
 </li>
-<li><p>访问http//username.github.io网址就可以看到博客界面了。</p>
+<li><p>访问http//username.github.io网址就可以看到博客界面了。<br>##<strong>hexo更换主题后，本地运行测试命令行提示 : WARN No layout: index.html?</strong>##<br></p>
 </li>
-</ul>
-<ol start="2">
-<li>##<font size=6><strong>hexo更换主题后，本地运行测试命令行提示 : WARN No layout: index.html?</strong>##</font><br></li>
-</ol>
-<ul>
 <li><p>检查下载的主题是不是放在了themes文件夹下面，比如next主题的放置，就是点开themes就看到next的文件夹，next下面就是主题的文件，不能打开next文件夹还有themes</p>
 </li>
 <li><p>检查站点配置_config.yml是不是下面的形式</p>
@@ -129,24 +121,17 @@
 <ul>
 <li>主题名字是否与themes文件夹下 主题的名字一致。</li>
 </ul>
-<ol start="3">
-<li>##<font size=6><b>hexo指令无法使用，一直报错，不管是hexo clean 、hexo g、还是hexo d 、hexo new，这些指令都出现了错误，##</font><b/><br></li>
-</ol>
+<p>##<b>hexo指令无法使用，一直报错，不管是hexo clean 、hexo g、还是hexo d 、hexo new，这些指令都出现了错误##<b/><br></p>
 <ul>
 <li>报错原因：插件错误，hexo-deployer-git插件出现错误</li>
-<li>在blog下node_modules文件夹下检查“hexo-deployer-git”文件是否异常</li>
-</ul>
-<ol start="4">
-<li><h2 id="npm-WARN-optional-SKIPPING-OPTIONAL-DEPENDENCY-fsevents-1-2-0-node-modules-fsevents"><a href="#npm-WARN-optional-SKIPPING-OPTIONAL-DEPENDENCY-fsevents-1-2-0-node-modules-fsevents" class="headerlink" title="npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.0 (node_modules\fsevents##"></a><font size=6><strong>npm WARN optional SKIPPING OPTIONAL DEPENDENCY: <a href="mailto:fsevents@1.2.0" target="_blank" rel="noopener">fsevents@1.2.0</a> (node_modules\fsevents</strong>##</font><br></h2></li>
-</ol>
-<ul>
+<li>在blog下node_modules文件夹下检查“hexo-deployer-git”文件是否异常<br>##<strong>npm WARN optional SKIPPING OPTIONAL DEPENDENCY: <a href="mailto:fsevents@1.2.0" target="_blank" rel="noopener">fsevents@1.2.0</a> (node_modules\fsevents</strong>##<br> </li>
 <li>原因：<br>fsevents不在package.json里，但是仍然安装了，是因为你的系统不是Windows系统，fsevents是苹果系统的可选依赖,你的项目有可能是团队项目，别人在他的mac上安装了fsevents相关依赖库，所以到这边你也就安装到你的windows上边了。你可以检查你的package.json 文件中是不是有fsevents相关依赖，删除即好！<br><br>如果没有，其他的npm包也会有依赖fsevents的！！！<br><br>这是warning错误，是因为mac下需要 fsevents，这里是在windows环境，所以可以忽略这个错误。<br></li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/17/%E7%94%A8hexo%20github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/" data-id="ck32uanx5000204uwc5xf2ut6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/17/%E7%94%A8hexo%20github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/" data-id="ck32ugfek0002pouw92e3fits" class="article-share-link">Share</a>
       
       
     </footer>
