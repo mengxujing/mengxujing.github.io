@@ -97,8 +97,8 @@
 </li>
 <li><p>在blog目录下执行如下命令<br><br>  ‘’’ bash<br>  //生成静文件<br>   hexo g<br>  //部署网站<br>   hexo d<br>  ‘’’</p>
 </li>
-<li><p>访问http//username.github.io网址就可以看到博客界面了。<br><br>##hexo更换主题后，本地运行测试命令行提示 : WARN No layout: index.html?##</p>
-</li>
+<li><p>访问http//username.github.io网址就可以看到博客界面了。<br></p>
+<h2 id="hexo更换主题后，本地运行测试命令行提示-WARN-No-layout-index-html"><a href="#hexo更换主题后，本地运行测试命令行提示-WARN-No-layout-index-html" class="headerlink" title="hexo更换主题后，本地运行测试命令行提示 : WARN No layout: index.html?"></a>hexo更换主题后，本地运行测试命令行提示 : WARN No layout: index.html?</h2></li>
 <li><p>检查下载的主题是不是放在了themes文件夹下面，比如next主题的放置，就是点开themes就看到next的文件夹，next下面就是主题的文件，不能打开next文件夹还有themes</p>
 </li>
 <li><p>检查站点配置_config.yml是不是下面的形式</p>
@@ -115,8 +115,7 @@
 <ul>
 <li>主题名字是否与themes文件夹下 主题的名字一致。<br></li>
 </ul>
-<p>##hexo指令无法使用，一直报错，不管是hexo clean 、hexo g、还是hexo d 、hexo new，这些指令都出现了错误##</p>
-<ul>
+<h2 id="hexo指令无法使用，一直报错，不管是hexo-clean-、hexo-g、还是hexo-d-、hexo-new，这些指令都出现了错误"><a href="#hexo指令无法使用，一直报错，不管是hexo-clean-、hexo-g、还是hexo-d-、hexo-new，这些指令都出现了错误" class="headerlink" title="hexo指令无法使用，一直报错，不管是hexo clean 、hexo g、还是hexo d 、hexo new，这些指令都出现了错误"></a>hexo指令无法使用，一直报错，不管是hexo clean 、hexo g、还是hexo d 、hexo new，这些指令都出现了错误</h2><ul>
 <li>报错原因：插件错误，hexo-deployer-git插件出现错误</li>
 <li>在blog下node_modules文件夹下检查“hexo-deployer-git”文件是否异常<br><h2 id="npm-WARN-optional-SKIPPING-OPTIONAL-DEPENDENCY-fsevents-1-2-0-node-modules-fsevents"><a href="#npm-WARN-optional-SKIPPING-OPTIONAL-DEPENDENCY-fsevents-1-2-0-node-modules-fsevents" class="headerlink" title="npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.0 (node_modules\fsevents"></a>npm WARN optional SKIPPING OPTIONAL DEPENDENCY: <a href="mailto:fsevents@1.2.0" target="_blank" rel="noopener">fsevents@1.2.0</a> (node_modules\fsevents</h2></li>
 <li>原因：<br>fsevents不在package.json里，但是仍然安装了，是因为你的系统不是Windows系统，fsevents是苹果系统的可选依赖,你的项目有可能是团队项目，别人在他的mac上安装了fsevents相关依赖库，所以到这边你也就安装到你的windows上边了。你可以检查你的package.json 文件中是不是有fsevents相关依赖，删除即好！<br><br>如果没有，其他的npm包也会有依赖fsevents的！！！<br><br>这是warning错误，是因为mac下需要 fsevents，这里是在windows环境，所以可以忽略这个错误。<br></li>
