@@ -112,7 +112,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/16/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81/" data-id="ck32qztq100012ouw7q1ad1iw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/16/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81/" data-id="ck32r3y570002isuwfye95xxg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -160,7 +160,7 @@
 </ol>
 <p><strong>继承</strong><br></p>
 <ol>
-<li><p>概念：<br><br>&nbsp;&nbsp;继承就是子类继承父类的特征和行为，使得子类对象（实例）具有父类的实例域和方法，或子类从父类继承方法，使得子类具有父类相同的行为。<br></p>
+<li><p>概念：<br><br>&nbsp;&nbsp;继承就是子类继承父类的特征和行为，使得子类对象（实例）具有父类的实例域和方法，或子类从父类继承方法，使得子类具有父类相同的行为。<br><br>（其实就是从已有的类派生出新的类，为继承。<br>当在不同的类中也出现共同的特征和动作，可以把这些共同的特征和动作放在一个类中，成为父类。然后将其扩展为其它多个子类，这些子类继承父类中的特征和动作。继承的好处就是是代码变得简洁，易于维护，易于理解。）</p>
 </li>
 <li><p>特点：<br></p>
 <p> 子类继承父类非 private 的属性、方法。</p>
@@ -168,23 +168,55 @@
 <p> Java 的继承是单继承，但是可以多重继承。</p>
 <p> 提高了类之间的耦合性（代码独立性越差）。</p>
 </li>
-<li><p>‘’’<br> class Animal{<br>   privated</p>
-<pre><code>String name;
-String move;</code></pre><p>   public</p>
-<pre><code>void show(){
-System.out.println(&quot;name:move&quot;);
-}</code></pre><p>  }<br> class Bird extends Animal{<br>   void move(){</p>
-<pre><code>System.out.println(&quot;Bird:fly&quot;);}</code></pre><p>   void all(){</p>
-<pre><code>super.show();
-this.move();}</code></pre><p> public static void main(String args[]){<br> Bird b=new Bird();<br> b.all();</p>
-<p> ‘’’</p>
-</li>
 </ol>
+<p>3.<br>    ‘’’<br>    class Animal {<br>    void move() {<br>        System.out.println(“animal : move”);<br>     }<br>    }</p>
+<pre><code>class Dog extends Animal {
+void move() {
+   System.out.println(&quot;dog : move&quot;);
+ }
+void eatTest() {
+  this.move();   // this 调用自己的方法
+  super.move();  // super 调用父类方法
+}
+}
+
+public class Test {
+public static void main(String[] args) {
+Dog d = new Dog();
+d.eatTest();
+}
+}
+&apos;&apos;&apos;</code></pre><p>super：用来引用当前对象的父类。<br></p>
+<ul>
+<li>super 还可以调用父类的构造函数。但super语句必须是子类构造方法的第一条语句。不能在子类中使用父类构造方法名来调用父类构造方法。 且父类的构造方法不被子类继承。调用父类的构造方法,如果父类的构造方法中带有参数，则必须在子类的构造方法中通过 super 关键字调用父类的构造方法并配以适当的参数列表。如果父类构造方法没有参数，系统会自动调用父类的无参构造方法。<br></li>
+<li>静态方法中不能使用 super 关键字。<br><br>this：指向自己的引用。<br></li>
+</ul>
+<ol start="4">
+<li>final 关键字<br>声明类可以把类定义为不能继承的，即最终类；或者用于修饰方法，则该方法不能被子类重写.<br></li>
+</ol>
+<ul>
+<li>final修饰类中的方法,方法可以被继承，但继承后不能被重写。<br></li>
+<li>final修饰类，类不可以被继承。<br></li>
+</ul>
+<p><strong>多态</strong><br></p>
+<p>多态就是同一个行为具有多个不同表现形式或形态的能力。同一个类使用不同的实例对象执行的不同的操作。<br></p>
+<p>多态存在的三个必要条件:</p>
+<ul>
+<li><p>继承</p>
+</li>
+<li><p>重写</p>
+</li>
+<li><p>父类引用指向子类对象(Father a=new Son)<br></p>
+<p>(Son型自动提升为Fatherl型（向上转型，得按Father对象进行操作），因此a只能调用Father类中的方法，对Son中特有功能无法访问 )。如果还想用Son的特有功能，可以强制向下转型：Son c = (Son) a。向下转型是为了使用特有方法。如果两者不具备继承关系不能强制转换！（向上转型为了提高扩展性并限制特有方法，向下转型为了使用特定方法）。对于转型自始至终都是子类对象做着类型的变化。</p>
+<br>
+[引用变量在编译阶段只能调用编译时类型所具有的方法，但运行时则执行他运行时类型所具有的方法。]
+</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/13/first/" data-id="ck32qztpk00002ouwehpvbl4p" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/13/first/" data-id="ck32r3y4i0000isuw8jtvabto" class="article-share-link">Share</a>
       
       
     </footer>
@@ -233,7 +265,7 @@ this.move();}</code></pre><p> public static void main(String args[]){<br> Bird b
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/12/hello-world/" data-id="ck32qztq400022ouw2rc04n5k" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/12/hello-world/" data-id="ck32r3y4q0001isuw8n911guj" class="article-share-link">Share</a>
       
       
     </footer>
